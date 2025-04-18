@@ -103,30 +103,37 @@ header{
 }
 #searchbox{
     width: 25vw;
-    height: 4vh;
+    height: 2vw;
     background-color: #76a89d;
     border: none;
     border-right: 0.2rem solid #faffe9;
     padding: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1vw;
     color: black;
 }
 #srch-ico{
-    margin: 0rem;
-    padding: 0.56rem;
+    padding: 1vw;
+    height: 2vh;
+    width: 1vw;
 }
 #srch-btn{
     background-color: #76a89d;
     transition: 0.4s;
-    height: 5.5vh;
+    height: 2.7vw;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #srch-btn:hover{
     background-color: #292f3b;
 }
 ::placeholder{
-    font-size: 1.2rem;
+    font-size: 1vw;
     color: black;
+}
+input:focus{
+    outline: none;
 }
 .homeImg{
     position: relative;
@@ -147,73 +154,74 @@ header{
     justify-content: center;
     align-items: center;
 }
-input:focus{
-    outline: none;
-}
+
 .s2Items{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 15vh;
 }
 .s2item{
     display:flex;
     justify-content:center;
     align-items: center;
     margin: 0rem 2rem 0.9rem;
-    height: 5rem;
-    width: 5rem;
-    padding: 0.5rem;
+    height: 4vw;
+    width: 4vw;
+    padding: 0.5vw;
     border-radius: 50%;
     background-color: #faffe9;
 }
+.s2item img{
+    height: 2vw;
+    width: 2vw;
+}
 .s2ItemParent{
-    margin: 5rem;
+    margin: 5vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 .s2ItemParent h4{
-    margin: -0.5rem;
     color: white;
+    font-size: 0.7vw;
 }
 .trdtitle{
-    margin-top: 2rem;
-    margin-bottom: -5rem;
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
 }
 .trdtitle h1{
-    font-size:3rem;
+    font-size:2.5vw;
     font-family: serif;
-    text-shadow: 5px 5px 30px black;
 }
 .trendingSection{
-    margin: 8rem 6rem 2rem;
+    margin: 2rem 6rem 2rem;
     border-radius:2rem;
     background-color: #835a4e;
     display: flex;
     padding: 1rem 0.7rem 1.4rem 0.7rem;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .trending{
-    height: 22rem;
-    width: 14.5rem;
-    font-size: 10pt;
+    height: 16vw;
+    width: 14vw;
     display: flex;
     justify-content: center;
     margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
 .trdimg{
-    height: 22rem;
-    width: 14.5rem;
+    height: 16vw;
+    width: 11vw;
     transition: 0.2s;
     box-shadow: 9px 7px 9px rgb(50, 51, 52);
 }
 .trdimg:hover{
-    height: 23rem;
-    width: 15.5rem; 
+    height: 17vw;
+    width: 12vw; 
 }
 .bestSellerSection{
     margin: 0rem 6rem 2rem;
@@ -222,72 +230,69 @@ input:focus{
     align-items: center;
     padding: 1rem;
     padding-top: 2rem;
+    padding-bottom: 3vw;
     flex-wrap: wrap;
     border:0.3rem solid #292f3b;
     border-radius: 2rem;
     position: relative;
 }
 .bsttitle{
-    margin-top: 2rem;
-    margin-bottom: -5rem;
+    margin-top: 2vw;
+    margin-bottom: -3.5vw;
     display: flex;
     justify-content:flex-start;
     position:relative;
-    left: 11rem;
-    top:0.7rem;
+    left: 6vw;
     z-index: 120;
-    width: 15rem;
+    width: 12vw;
     background-color: #faffe9;
 }
 .bsttitle h1{
-    font-size:3rem;
+    font-size:2.5vw;
     font-family: serif;
-    text-shadow: 5px 5px 30px black;
 }
 .bestSeller{
-    height: 32rem;
-    width: 16.5rem;
+    height: 20vw;
+    width: 14vw;
     display: flex;
     justify-content: center;
     margin: 2rem 2rem 1rem;
 }
 .bstimg{
-    height: 30rem;
-    width: 19.5rem;
-    transition: 0.2s;
-    margin-top: 1rem;
+    height: 21vw;
+    width: 19vw;
+    transition: 0.3s;
+    margin-top: 1vw;
     box-shadow: 0px 3px 20px rgb(0, 0, 0);
 }
 .bstimg:hover{
-    height: 32rem;
-    width: 21.5rem;
+    height: 22vw;
+    width: 20vw;
     z-index: 12;
 }
 .morebtn{
-    margin-top: 3rem;
-    margin-bottom: -3rem;
     margin-right: 6rem;
     position: relative;
-    top: 1.1vw;
-    left: 88vw;
+    top:3.2vw;
+    left: 87vw;
     display: flex;
     flex-direction:row;
     justify-content: flex-start;
-    width: 10rem;
+    width: 10vw;
 }
 
 #morebtn{
     cursor: pointer;
     color: white;
     background-color: #292f3b;
-    width: 8rem;
-    height: 4rem;
+    width: 6vw;
+    height: 2.5vw;
     border: none;
     border-radius: 0.9rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: 0.35s;
-    box-shadow: 8px 6px 1px black;
+    box-shadow: 8px 5px 1px #76a89d;
     z-index: 200;
 }
 
