@@ -1,9 +1,11 @@
 var clickedBooks1 = document.querySelectorAll('.trdimg');
 var clickedBooks2 = document.querySelectorAll('.bstimg');
+
 document.getElementById("morebtn").onclick = openCategoriesPage;
 function openCategoriesPage(){
     window.location.href  = "categories.html";
 }
+
 var booksAuthors ={
     "Steve Jobs" : "Walter Isaacson",
     "Dune" : "Frank Herbert",
@@ -13,7 +15,7 @@ var booksAuthors ={
     "Atomic Habits" : "James Clear",
     "7 Habits Of Highly Effective People" : "Stephen R. Covey",
     "The Da Vinci Code" : "Dan Brown",
-    "he Hunger Games" : "Suzanne Colins",
+    "The Hunger Games" : "Suzanne Colins",
     "The Hobbit, or There and Back Again" : "J.R.R. Tolkien",
     "Jurassik Park" : "Michael Crichton",
     "Harry Potter And The Sorcerer's Stone": "J.K. Rowling",
@@ -41,7 +43,7 @@ var booksImages ={
     "Atomic Habits" : "images/Atomic Habits.jpg",
     "7 Habits Of Highly Effective People" : "images/7 Habits of highly effective people.jpg",
     "The Da Vinci Code" : "images/The Da vinci Code.jpg",
-    "he Hunger Games" : "images/The hunger Games.jpg",
+    "The Hunger Games" : "images/The hunger Games.jpg",
     "The Hobbit, or There and Back Again" : "images/The hobbit.jpg",
     "Jurassik Park" : "images/Jurassik Park.jpg",
     "Harry Potter And The Sorcerer's Stone": "images/Harry potter and the sorcerer's stone.jpg",
@@ -55,7 +57,7 @@ var booksRatings={
     "Atomic Habits" : 4,
     "7 Habits Of Highly Effective People" : 5,
     "The Da Vinci Code" : 5,
-    "he Hunger Games" : 4,
+    "The Hunger Games" : 4,
     "The Hobbit, or There and Back Again" : 4,
     "Jurassik Park" : 4,
     "Harry Potter And The Sorcerer's Stone": 5,
@@ -83,4 +85,33 @@ function openBookPage(bookTitle){
 };
 function openLoginPage(){
     window.location.href = "login.html";
+}
+
+const resultsBox = document.querySelector(".search-recs");
+const inputBox = document.getElementById("searchbox");
+
+inputBox.onkeyup = function(){
+    let result = [];
+    let input = inputBox.value;
+    if(input.length){
+        result = allBooksTitles.filter((keyword)=>{
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        }).slice(0,4);
+        console.log(result)
+    }
+    displaySearchResult(result);
+}
+function displaySearchResult(result){
+    const content = result.map((list)=>{
+        return "<li onclick=selectInput(this)>" + list +"</li>";
+    });
+    resultsBox.innerHTML = "<ul>" + content.join("") + "</ul>";
+}
+function selectInput(list){
+    inputBox.value = list.innerHTML;
+    resultsBox.innerHTML = '';
+}
+
+function submitSearch(){
+    openBookPage(inputBox.value);
 }
