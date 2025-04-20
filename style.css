@@ -11,7 +11,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 100000;
-    height: 5.5vh;
+    height: 10;
     border-bottom: #113959 solid;
 }
 .header-elements{
@@ -56,7 +56,7 @@ header{
 #button{
     background-color: #76a89d;
     position: relative;
-    left: 15vw;
+    left: 16vw;
     color: #000000;
     border: none;
     font-size: 0.9vw;
@@ -74,32 +74,65 @@ header{
     display: flex;
     justify-content: flex-end;
     width: 1vw;
+    left: 10vw;
     position: relative;
-    left: 7vw;
 }
 .cart img{
-    width: 3vw;
-    height: 3vh;
+    width: 2.5vw;
+    height: 2.5vh;
 }
 .sectionaccueil{
     height: 28vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
-.welcmTextCont{
+.sectionaccueilDiv{
+    width: 25vw;
+}
+#welcmTextCont{
     position: relative;
-    left: -20vw;
 }
-.welcmTextCont h1{
-    font-size: 3vw;
+#welcmTextCont h1{
+    font-size: 2.8vw;
 }
-.inputContainer{
+.search-area{
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 35vw;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    top: 8vw;
+    left: 35vw;
+}
+.search-recs{
+    background-image: radial-gradient(circle, #faffe9 0%, #76a89d 100%);
+    width: 100%;
+    border-bottom-left-radius:1vw;
+    border-bottom-right-radius: 1vw;
+    border-top: 3px solid #faffe9;
+}
+.search-recs ul{
+    max-width: 28vw;
+}
+.search-recs ul li{
+    list-style: none;
+    padding: 1vw 1vw;
+    cursor: pointer;
+    font-size: 1vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 26.8vw;
+}
+.search-recs ul li:hover{
+    background-color: #76A89D;
+    border-radius: 1vw;
 }
 #searchbox{
     width: 25vw;
@@ -136,15 +169,15 @@ input:focus{
     outline: none;
 }
 .homeImg{
+    background-color: transparent;
     position: relative;
-    left: 20vw;
-    height: 30vh;
-    width: 20vw;
-    z-index: -100;
+    height: 28vh;
 }
 .homeImg img{
     height: 30vh;
     width: 15vw;
+    position: relative;
+    top: -1vw;
 }
 .sectionaccueil2{
     background-color: #292f3b;
@@ -303,7 +336,7 @@ input:focus{
 footer{
     background-color: #faffe9;
     border-top: #113959 solid;
-    height: 10vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
