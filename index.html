@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/ico/logo ico.png" type="image/x-icon">
-    <title>Bookora Book Store</title>
+    <title>Bookaura Book Store</title>
 </head>
 <body>
     <header>
@@ -15,27 +15,36 @@
                 <div class="navOpt"><a id="home" href="/">Home</a></div>
                 <div class="navOpt"><a href="Categories.html">Categories</a></div>
                 <div class="navOpt"><a href="">Contact</a></div>            
-                <div class="navOpt"><a href="">Panier</a></div>
+                <div class="navOpt"><a href="cart.html">Panier</a></div>
             </div>
-            <button id="button" type="button" onclick="openLoginPage() ">Login</button>
+            <button id="button" type="button" onclick="openLoginPage()">Login</button>
             <div class="cart">
-                <a href=""><img src="images/shopping-cart.svg" alt="Cart"></a>
+                <a href="cart.html"><img src="images/shopping-cart.svg" title="Cart"></a>
+                <a href=""><img src="images/ico/heart.svg" title="wishlist"></a>
             </div>
         </div>
     </header>
         <section class="sectionaccueil">
-            <div class="welcmTextCont">
+            <div class="sectionaccueilDiv" id="welcmTextCont">
                 <h1><i>Ignite Your Mind</i> 
                     <br>
                     <i>with a Good Book</i>
                 </h1>
             </div>
-            <div class="inputContainer">
-                <input id="searchbox" type="text" placeholder="Enter title, author ...">
-                <button type="submit" id="srch-btn"><img id="srch-ico" src="images/search-icon.svg" alt="search-icon"></button>
+            <div class="sectionaccueilDiv">
+                <div class="inputContainer">
+                    <div class="search-area">
+                        <input id="searchbox" type="text" placeholder="Enter title, author..." autocomplete="off">
+                        <button type="submit" id="srch-btn" onclick="submitSearch()"><img id="srch-ico" src="images/search-icon.svg" alt="search-icon"></button>
+                    </div>
+                    <div class="search-recs">
+                    </div>
+                </div>
             </div>
-            <div class="homeImg">
-                <img src="images/Home Image.jpg" alt="">
+            <div class="sectionaccueilDiv">
+                <div class="homeImg">
+                    <img src="images/Home Image.jpg" alt="">
+                </div>
             </div>
         </section>
         <section class="sectionaccueil2">
@@ -91,11 +100,9 @@
             <div class="bestSeller"><img class="bstimg" src="images/the odyssey.jpg" alt="The Odyssey"></div>
             <div class="bestSeller"><img class="bstimg" src="images/Harry potter and the sorcerer's stone.jpg" alt="Harry Potter And The Sorcerer's Stone"></div>
             <div class="bestSeller"><img class="bstimg" src="images/Jurassik Park.jpg" alt="Jurassik Park"></div>
-            <div class="bestSeller"><img class="bstimg" src="images/The hobbit.jpg" alt="	The Hobbit, or There and Back Again"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/The hobbit.jpg" alt="The Hobbit, or There and Back Again"></div>
             <div class="bestSeller"><img class="bstimg" src="images/7 Habits of highly effective people.jpg" alt="7 Habits Of Highly Effective People"></div>
             <div class="bestSeller"><img class="bstimg" src="images/The Da vinci Code.jpg" alt="The Da Vinci Code"></div>
-            <div class="bestSeller"><img class="bstimg" src="images/The hunger Games.jpg" alt="The Hunger Games"></div>
-            <div class="bestSeller"><img class="bstimg" src="images/Atomic Habits.jpg" alt="Atomic Habits"></div>
         </article>
     <footer>
         <div class="footeroptions">
@@ -120,5 +127,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="booksDb.js"></script>
 </body>
 </html>
