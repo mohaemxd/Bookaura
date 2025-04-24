@@ -1,0 +1,40 @@
+.sideNav{
+    background-color: red;
+    height: 50vw;
+    margin-left: 2vw;
+    width: 15vw;
+}
+.mainCatpanel{
+    background-color: blue;
+    width: 80vw;
+    margin-right: 2vw;
+    height: 50vw;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.herocat{
+    display: flex;
+    background-color: green;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.herocat2{
+    display: flex;
+    background-color: black;
+}
+.categorieTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+    width: 50%;
+    background-color: pink;
+}
+h5{
+    font-size: 2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
