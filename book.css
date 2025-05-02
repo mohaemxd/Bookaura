@@ -1,6 +1,12 @@
+html{
+    scroll-behavior: smooth;
+}
 main{
     background-color: #faffe9;
     margin-top: -5%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 .page-container{
     background-color: #faffe9;
@@ -247,8 +253,9 @@ i{
     margin-bottom: 1vw ;
 }
 .overview-cont p{
-    font-size: 1.2vw;
-    font-weight: 500;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 1.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .prodDetails-section{
@@ -266,6 +273,7 @@ i{
     justify-content: space-evenly;
     align-items:center;
     border-bottom: 0.15vw solid grey;
+
 }
 #prodDetailsInfoPanelList li{
     border: 0.15vw solid grey;
@@ -289,12 +297,14 @@ i{
     justify-content: space-evenly;
     align-items: center;
     background-color: #347d56;
+
 }
 .prodPanel{
     background-color: transparent;
     width: 28vw;
     height: 25vw;
     margin: 1vw;
+    border-bottom: 0.15vw solid grey;
 }
 .aboutAuthorInfoCon{
     width: 100%;
@@ -351,17 +361,21 @@ i{
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding:1vw;
 }
+
 .infoList li{
     list-style-type: none;
-    margin: 1vw;
+    margin: 0.4vw;
     font-size: 1vw;
     font-family: serif;
 }
 .reviewsSection{
-    border: 0.1vw solid black;
+    border-left: 0.1vw solid black;
+    border-right: 0.1vw solid black;
+    border-bottom: 0.1vw solid black;
     width: 100%;
-    height: auto;
     color: white;
+    flex: 1;
+
 }
 #tableOfContCont{
     display: flex;
@@ -379,6 +393,7 @@ i{
     font-size: 1.8vw;
     font-weight: 500;
     color: black;
+    margin-left: 1vw;
 }
 .reviewsSection h3{
     font-size: 0.8vw;
@@ -386,7 +401,7 @@ i{
 }
 #reviewForm{
     height: 10vw;
-    width: 60vw;
+    width: 95%;
     border: 0.1vw solid black;
     display: flex;
     justify-content: space-between;
@@ -396,11 +411,11 @@ i{
 #reviewForm label{
     font-size: 0.7vw;
 }
-#reviewerName, #reviewRating{
+#reviewerName, #reviewRating, #reviewTitle{
     background-color: #faffe9;
     border: 0.1vw solid black;
     width: 10vw;
-    height: 2vw;
+    height: 1.5vw;
     margin: 1vw;
     font-size: 0.8vw;
 }
@@ -422,6 +437,7 @@ i{
     padding: 1vw;
     font-size: 0.8vw;
     margin-left: 1vw;
+    resize: none;
 }
 #submitRevBtn{
     width: 5vw;
@@ -430,7 +446,76 @@ i{
     background-color: #835a4e;
     border: none;
     border-radius: 1vw;
+    cursor: pointer;
+    font-size: 0.6vw;
+    font-family: serif;
+    transition: 0.3s;
+}
+#submitRevBtn:hover{
+    background-color:#76a89d;
 }
 #reviewsContainer{
-    background-color: red;  
+    display: flex;
+    flex-direction: column;
+}
+.review{
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    border: 0.1vw solid black;
+}
+.review-header{
+    display: flex;
+    margin: 1vw;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.reviewer-name{
+    font-family:sans-serif;
+    font-weight: 100;
+    font-size: 0.9vw;
+    text-decoration: underline;
+    color: black;
+}
+.review-body, .review-title{
+    width: 50%;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+.review-body p{
+    font-size: 0.8vw;
+    color: black;
+    width: 50%;
+    border: 0.05vw solid black;
+    padding: 1vw;
+}
+.review-rating{
+    width: 60%;
+}
+.review-title{
+    display: flex;
+    justify-content: flex-end;
+}
+.review-title strong{
+    width: 55%;
+    text-decoration: underline;
+    color: black;
+    font-size: 1vw;
+    font-weight: 400;
+}
+.emptyReview{
+    color: black;
+    font-size: 0.8vw;
+    font-weight: 200;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    justify-content: center;
+    display: flex;
 }

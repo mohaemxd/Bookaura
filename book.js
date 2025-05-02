@@ -62,4 +62,5 @@ window.onload = function(){
             ratingDisplay.appendChild(mtstar);
         }
     }
+    displayReviews(title);
 };

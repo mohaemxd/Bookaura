@@ -49,7 +49,7 @@
                                 </div>
                                 <h6 id="ratingNum"></h6>
                                 <div class="writeReviewCont">
-                                    <a href="">Write a review</a>
+                                    <a href="#addReviewForm">Write a review</a>
                                 </div>
                             </div>
                         </div>
@@ -128,12 +128,12 @@
             </section>
             <section class="reviewsSection">
                 <h2>Reviews</h2>
-                <div class="addReviewForm">
+                <div id="addReviewForm" class="addReviewForm">
                     <h3>Add Your Review</h3>
                     <form id="reviewForm">
                         <div class="labelAndInputCont">
                             <label for="reviewerName">Name:</label>
-                            <input type="text" id="reviewerName" name="reviewerName" required>
+                            <input type="text" id="reviewerName" name="reviewerName" required autocomplete="off">
                         </div>
                         
                         <div class="labelAndInputCont">
@@ -147,7 +147,9 @@
                                 <option value="1">1 star</option>
                             </select>
                         </div>
-                        <div class="labelAndInputCont">    
+                        <div class="labelAndInputCont">
+                            <label for="review-title">Review Title:</label>
+                            <input type="text" id="reviewTitle" class="reviewTitle" name="reviewTitle" required autocomplete="off">
                             <label for="reviewText">Review:</label>
                              <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
                              <button type="submit" id="submitRevBtn">Submit Review</button>
@@ -156,44 +158,16 @@
                     </form>
                     <div id="reviewsContainer">
                         <!-- Reviews will be loaded here dynamically -->
-                        <div class="review">
-                            <div class="review-header">
-                                <strong class="reviewer-name">Jane Doe</strong>
-                                <span class="review-rating">★★★★★</span>
-                            </div>
-                            <div class="review-body">
-                                <p>This book was amazing! The story kept me hooked from start to finish. Highly recommended.</p>
-                            </div>
-                        </div>
+                        <!-------------------------------------------------->
                     </div>
                 </div>
             </section>
         </div>
     </main>
-    <footer>
-        <div class="footeroptions">
-            <div id="footerInfo">
-                <a href="/">Home</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-                <a href="">Privacy</a>
-                <a href="">Help</a>
-                <div id="socialCont">
-                    <a href="" class="socialIcon"><img src="images/ico/instagram.svg" alt="Instagram"></a>
-                    <a href="" class="socialIcon"><img src="images/ico/facebook.svg" alt="Instagram"></a>
-                </div>
-                <div id="mapCont">
-                    <iframe title="map" id="mapId" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.2017338154093!2d4.054777583143902!3d36.69627584318798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc816c66438fb%3A0x390274960dacce78!2sD%C3%A9partement%20d&#39;Informatique%2C%20UMTO!5e1!3m2!1sen!2sdz!4v1743873514189!5m2!1sen!2sdz" frameborder="0">Location on Maps</iframe>
-                </div>
-            </div>        
-            <div id="logor">
-                <h1 id="ftrlogo">BOOKAURA ®  2025</h1>
-            </div>
-        </div>
-    </footer>
     <script src="book.js"></script>
     <script src="script.js"></script>
     <script src="booksDb.js"></script>
     <script src="authorsDb.js"></script>
+    <script src="reviews.js"></script>
 </body> 
 </html>
