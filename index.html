@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/ico/logo ico.png" type="image/x-icon">
+    <title>Bookaura Book Store</title>
+</head>
+<body>
+    <header>
+        <div class="header-elements">
+            <a href="/"><h1 id="name">BOOKAURA</h1></a>
+            <div class="navItems">
+                <div class="navOpt"><a id="home" href="/">Home</a></div>
+                <div class="navOpt"><a href="Categories.html">Categories</a></div>
+                <div class="navOpt"><a href="">Contact</a></div>            
+                <div class="navOpt"><a href="cart.html">Panier</a></div>
+            </div>
+            <button id="button" type="button" onclick="openLoginPage()">Login</button>
+            <div class="cart">
+                <a href="cart.html" target="_blank"><img src="images/shopping-cart.svg" title="Cart"></a>
+                <a href="" target="_blank"><img src="images/ico/heart.svg" title="wishlist"></a>
+            </div>
+        </div>
+    </header>
+        <section class="sectionaccueil">
+            <div class="sectionaccueilDiv" id="welcmTextCont">
+                <h1><i>Ignite Your Mind</i> 
+                    <br>
+                    <i>with a Good Book</i>
+                </h1>
+            </div>
+            <div class="sectionaccueilDiv">
+                <div class="inputContainer">
+                    <div class="search-area">
+                        <input id="searchbox" type="text" placeholder="Enter title, author..." autocomplete="off">
+                        <button type="submit" id="srch-btn" onclick="submitSearch()"><img id="srch-ico" src="images/search-icon.svg" alt="search-icon"></button>
+                    </div>
+                    <div class="search-recs">
+                    </div>
+                </div>
+            </div>
+            <div class="sectionaccueilDiv">
+                <div class="homeImg">
+                    <img src="images/Home Image.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="sectionaccueil2">
+            <div class="s2Items">
+                <div class="s2ItemParent">
+                    <div class="s2item">
+                        <img src="/images/truck.svg" alt="Shopping cart">
+                    </div>
+                    <h4>Free Delivery</h4>
+                </div>
+                <div class="s2ItemParent">
+                    <div class="s2item">
+                        <img src="/images/book-open-text.svg" alt="Shopping cart">
+                    </div>
+                    <h4>Over 1000 Books</h4>
+                </div>
+                <div class="s2ItemParent">
+                    <div class="s2item">
+                        <img src="/images/hand-coins.svg" alt="Shopping cart">
+                    </div>
+                    <h4>Affordable Prices</h4>
+                </div>
+                <div class="s2ItemParent">
+                    <div class="s2item">
+                        <img src="/images/award.svg" alt="Shopping cart">
+                    </div>
+                    <h4>Best Quality</h4>
+                </div>
+                
+            </div>
+        </section>
+        <div class="trdtitle">
+            <h1>Trending this week</h1>
+        </div>
+        <article class="trendingSection">
+            <div class="trending"><img class="trdimg" src="images/steve_jobs.jpg" alt="Steve Jobs"></div>
+            <div class="trending"><img class="trdimg" src="images/dune.jpg" alt="Dune"></div>
+            <div class="trending"><img class="trdimg" src="images/Atomic Habits.jpg" alt="Atomic Habits"></div>
+            <div class="trending"><img class="trdimg" src="images/the girl with the dragon tattoo.jpg" alt="The Girl With The Dragon Tattoo"></div>
+            <div class="trending"><img class="trdimg" src="images/the odyssey.jpg" alt="The Odyssey"></div>
+        </article>
+        <div class="bsttitle">
+            <h1 id="bstSlrTit">Bestsellers</h1>
+        </div>
+        <div class="morebtn">
+            <button type="button" id="morebtn">View More</button>
+        </div>
+        <article class="bestSellerSection">
+            <div class="bestSeller"><img class="bstimg" src="images/steve_jobs.jpg" alt="Steve Jobs"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/dune.jpg" alt="Dune"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/The Let Them Theory A Life-Changing Tool That Millions of People Can't Stop Talking About.jpg" alt="The Let Them Theory: A Life-Changing Tool That Millions of People Can't Stop Talking About"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/the girl with the dragon tattoo.jpg" alt="The Girl With The Dragon Tattoo"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/the odyssey.jpg" alt="The Odyssey"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/Harry potter and the sorcerer's stone.jpg" alt="Harry Potter And The Sorcerer's Stone"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/Jurassik Park.jpg" alt="Jurassik Park"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/The hobbit.jpg" alt="The Hobbit, or There and Back Again"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/7 Habits of highly effective people.jpg" alt="The 7 Habits of Highly Effective People"></div>
+            <div class="bestSeller"><img class="bstimg" src="images/The Da vinci Code.jpg" alt="The Da Vinci Code"></div>
+        </article>
+        <footer>
+            <div class="footeroptions">
+                <div id="footerInfo">
+                    <a href="/">Home</a>
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                    <a href="">Privacy</a>
+                    <a href="">Help</a>
+                    <div id="socialCont">
+                        <a href="" class="socialIcon"><img src="images/ico/instagram.svg" alt="Instagram"></a>
+                        <a href="" class="socialIcon"><img src="images/ico/facebook.svg" alt="Instagram"></a>
+                    </div>
+                    <div id="mapCont">
+                        <iframe title="map" id="mapId" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.2017338154093!2d4.054777583143902!3d36.69627584318798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc816c66438fb%3A0x390274960dacce78!2sD%C3%A9partement%20d&#39;Informatique%2C%20UMTO!5e1!3m2!1sen!2sdz!4v1743873514189!5m2!1sen!2sdz" frameborder="0">Location on Maps</iframe>
+                    </div>
+                </div>        
+                <div id="logor">
+                    <h1 id="ftrlogo">BOOKAURA ®  2025</h1>
+                </div>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+    <script src="booksDb.js"></script>
+    <script src="authorsDb.js"></script>
+</body>
+</html>

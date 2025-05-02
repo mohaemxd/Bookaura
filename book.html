@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="bookTabTitle">Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book.css">
+    <link rel="shortcut icon" href="images/ico/logo ico.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-elements">
+            <a href="/"><h1 id="name">BOOKAURA</h1></a>
+            <div class="navItems">
+                <div class="navOpt"><a id="home" href="/">Home</a></div>
+                <div class="navOpt"><a href="Categories.html">Categories</a></div>
+                <div class="navOpt"><a href="">Contact</a></div>            
+                <div class="navOpt"><a href="">Panier</a></div>
+            </div>
+            <button id="button" type="button" onclick="openLoginPage()" target="_blank">Login</button>
+            <div class="cart">
+                <a href="cart.html" target="_blank"><img src="images/shopping-cart.svg" title="Cart">Cart</a>
+                <a href=""><img src="images/ico/heart.svg" title="wishlist"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-container">
+            <section id="hero-section">
+                <div class="prodDetails">
+                    <div class="section-spacing"></div>
+                    <div class="product-image">
+                        <div class="prod-img">
+                            <div class="img-container">
+                                <img id="bookcovers" alt="book">
+                            </div>
+                            <a class="AddToWishListcont" onclick="wishlistBook()" href=""><img id="toWishListIcon" src="/images/ico/heart-plus.svg" alt="wish-list"><img id="WishListedIcon" src="/images/ico/heart.svg" alt="wish-list">Add to wishlist</a>
+                        </div>
+                    </div>
+                <div class="commerce-zone">
+                    <div class="prodSumHeader">
+                        <div class="prodHeaderInfo">
+                            <div class="prodHeaderTitle"><h1 id="titleBook"></h1></div>
+                            <div class="prodHeaderAuthor"><i>by<h1 id="authorBook"></h1></i></div>
+                            <div class="ratingDisplay">
+                                <div class="starsArea">
+                        
+                                </div>
+                                <h6 id="ratingNum"></h6>
+                                <div class="writeReviewCont">
+                                    <a href="">Write a review</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priceContainer">
+                        <div class="priceZone"><h1 id="priceBook"></h1></div>
+                    </div>
+                    <div class="cartBloc">
+                        <div class="purchase">
+                            <div class="priceAndpurchaseBtnCont">
+                                <div class="purchaseBtn">
+                                    <button type="button" id="addBookToCart">Ajouter au panier</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>    
+            <section class="overview-section">
+                <h1 id="overviewTitle"><i>Overview</i></h1>
+                <div class="overview-cont">
+                    <p id="bookOverviewP">
+
+                    </p>
+                </div>
+            </section>
+            <section class="prodDetails-section"> 
+                <div class="prodPanel">
+                    <ul id="prodDetailsInfoPanelList"> <li><div class="panelTitle"><h5 class="panelTitle">Product Details</h5></div></li></ul>
+                    <div class="panelInfo">
+                        <ul class="infoList">
+                            <li>ISBN:</li>
+                            <li>Publisher:</li>
+                            <li>Publication date:</li>
+                            <li>Pages:</li>
+                            <li>Product dimensions:</li>
+                        </ul>
+                        <ul class="infoList">
+                            <li id="isbnitem"></li>
+                            <li id="publisheritem"></li>
+                            <li id="pubdateitem"></li>
+                            <li id="pagesitem"></li>
+                            <li id="dimitems"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="prodPanel">
+                    <ul id="prodDetailsInfoPanelList"> <li><div class="panelTitle"><h5 class="panelTitle">About the Author</h5></div></li></ul>
+                    <div class="aboutAuthorInfoCon">
+                        <div id="authorPicCont">
+                            <img id="authorPicItem" src="" alt="">
+                        </div>
+                        <div id="aboutAuthorTextCont">
+                            <div class="infoList" id="authorinfocont">
+                                <ul>
+                                    <li>Name: </li>
+                                    <li>Date of birth:</li>
+                                </ul>
+                                <ul id="listOfInfoAuthor">
+                                    <li id="authorNameItem"></li>
+                                    <li id="authorDobItem"></li>
+                                </ul>
+                            </div>
+                            <div class="shortBioCont" id="shortBioItem"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prodPanel">
+                    <ul id="prodDetailsInfoPanelList"> <li><div class="panelTitle"><h5 class="panelTitle">Table of Contents</h5></div></li></ul>
+                    <div class="panelInfo" id="tableOfContCont">
+                        <ul class="infoList" id="tableCont">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="reviewsSection">
+                <h2>Reviews</h2>
+                <div class="addReviewForm">
+                    <h3>Add Your Review</h3>
+                    <form id="reviewForm">
+                        <div class="labelAndInputCont">
+                            <label for="reviewerName">Name:</label>
+                            <input type="text" id="reviewerName" name="reviewerName" required>
+                        </div>
+                        
+                        <div class="labelAndInputCont">
+                            <label for="reviewRating">Rating:</label>
+                            <select id="reviewRating" name="reviewRating" required>
+                                <option value="">Select</option>
+                                <option value="5">5 stars</option>
+                                <option value="4">4 stars</option>
+                                <option value="3">3 stars</option>
+                                <option value="2">2 stars</option>
+                                <option value="1">1 star</option>
+                            </select>
+                        </div>
+                        <div class="labelAndInputCont">    
+                            <label for="reviewText">Review:</label>
+                             <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+                             <button type="submit" id="submitRevBtn">Submit Review</button>
+                        </div>
+                        
+                    </form>
+                    <div id="reviewsContainer">
+                        <!-- Reviews will be loaded here dynamically -->
+                        <div class="review">
+                            <div class="review-header">
+                                <strong class="reviewer-name">Jane Doe</strong>
+                                <span class="review-rating">★★★★★</span>
+                            </div>
+                            <div class="review-body">
+                                <p>This book was amazing! The story kept me hooked from start to finish. Highly recommended.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footeroptions">
+            <div id="footerInfo">
+                <a href="/">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="">Privacy</a>
+                <a href="">Help</a>
+                <div id="socialCont">
+                    <a href="" class="socialIcon"><img src="images/ico/instagram.svg" alt="Instagram"></a>
+                    <a href="" class="socialIcon"><img src="images/ico/facebook.svg" alt="Instagram"></a>
+                </div>
+                <div id="mapCont">
+                    <iframe title="map" id="mapId" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.2017338154093!2d4.054777583143902!3d36.69627584318798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc816c66438fb%3A0x390274960dacce78!2sD%C3%A9partement%20d&#39;Informatique%2C%20UMTO!5e1!3m2!1sen!2sdz!4v1743873514189!5m2!1sen!2sdz" frameborder="0">Location on Maps</iframe>
+                </div>
+            </div>        
+            <div id="logor">
+                <h1 id="ftrlogo">BOOKAURA ®  2025</h1>
+            </div>
+        </div>
+    </footer>
+    <script src="book.js"></script>
+    <script src="script.js"></script>
+    <script src="booksDb.js"></script>
+    <script src="authorsDb.js"></script>
+</body> 
+</html>
