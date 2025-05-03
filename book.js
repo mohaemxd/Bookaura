@@ -64,3 +64,22 @@ window.onload = function(){
     }
     displayReviews(title);
 };
+
+
+
+function submitReview(bookName){
+    var userName = document.getElementById("reviewerName").value;
+    var reviewRating = document.getElementById("reviewRating").value;
+    var reviewTitle = document.getElementById("reviewTitle").value;
+    var reviewText = document.getElementById("reviewText").value;
+
+    var aNewReview ={
+        username: userName,
+        bookRated: bookName,
+        stars: reviewRating,
+        reviewTitle:reviewTitle,
+        review: reviewText,
+    }
+    reviews.push(aNewReview);
+    console.log(reviews);
+}

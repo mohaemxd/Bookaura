@@ -152,7 +152,7 @@
                             <input type="text" id="reviewTitle" class="reviewTitle" name="reviewTitle" required autocomplete="off">
                             <label for="reviewText">Review:</label>
                              <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
-                             <button type="submit" id="submitRevBtn">Submit Review</button>
+                             <button type="submit" id="submitRevBtn" onclick="submitReview(document.getElementById('titleBook').textContent)">Submit Review</button>
                         </div>
                         
                     </form>
