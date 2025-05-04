@@ -39,6 +39,14 @@ main{
     justify-content: center;
     align-items: center;
 }
+.navOpt #home{
+    transition: 0.3s ease-in-out;
+    background-color:#292f3b;
+}
+.navOpt a:hover{
+    color: #ffffff;
+    box-shadow: 1px 1px 0.5px #76a89d;
+}
 .prod-img{
     background-color: #faffe9;
     width: 20vw;

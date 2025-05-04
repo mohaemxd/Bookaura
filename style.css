@@ -54,12 +54,12 @@ header{
     padding-left :0.7vw ;
     padding-right :0.7vw ;
     background-color: #292f3b;
-    box-shadow: 3px 3px 0.5px #76a89d;
+    box-shadow: 3px 3px 1px #76a89d;
     border-radius: 1vw;
 }
 .navOpt a:hover{
     color: #ffffff;
-    box-shadow: 1px 1px 0.5px #76a89d;
+    box-shadow: 1px 1px 1px #76a89d;
 }
 .navOpt #home{
     background-color: #835a4e;
