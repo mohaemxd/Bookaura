@@ -1,88 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylecat.css">
-    <link rel="stylesheet" href="categorie.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylecat.css" />
+    <link rel="stylesheet" href="categorie.css" />
     <title>Categories</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-elements">
-            <h1 id="name"><img src="" alt="">BOOKAURA</h1>
-            <div class="navItems">
-                <div class="navOpt"><a href="/">Home</a></div>
-                <div class="navOpt"><a id="cata" href="Categories.html">Categories</a></div>
-                <div class="navOpt"><a href="">Contact</a></div>            
-                <div class="navOpt"><a href="">Panier</a></div>
-            </div>
-            <button id="button" type="button" onclick="openLoginPage() ">Login</button>
-            <div class="cart">
-                <a href=""><img src="images/shopping-cart.svg" alt="Cart"></a>
-            </div>
+      <div class="header-elements">
+        <h1 id="name"><img src="" alt="" />BOOKAURA</h1>
+        <div class="navItems">
+          <div class="navOpt"><a href="/">Home</a></div>
+          <div class="navOpt">
+            <a id="cata" href="Categories.html">Categories</a>
+          </div>
+          <div class="navOpt"><a href="">Contact</a></div>
+          <div class="navOpt"><a href="">Panier</a></div>
         </div>
+        <button id="button" type="button" onclick="openLoginPage() ">
+          Login
+        </button>
+        <div class="cart">
+          <a href=""><img src="images/shopping-cart.svg" alt="Cart" /></a>
+        </div>
+      </div>
     </header>
     <main>
-        <section class="catsearchCont">
-            <div class="schbox">
-                <button class="allbtn">All <img id="chevron" src="images/chevron-right.svg" alt="All options"><img id="chevrondown" src="images/chevron-down.svg" alt="All options"></button>
-                <input id="searchrequest" type="text" placeholder="Search by Title, Author or keyword...">
-                <button id="entersearch" class="allbtn"><img src="images/search-icon.svg" alt="Enter search"></button>
-            </div>
-        </section>
-        <section class="categoriesBar">
-            <nav class="catsNavBar">
-                <a class="catoption" href="">BestSellers</a>
-                <a class="catoption" href="">Nonfiction</a>
-                <a class="catoption" onclick="loadCatpage('Fictions Books')" href="Categorie.html">Fiction</a>
-                <a class="catoption" href="">Biography</a>
-                <a class="catoption" href="">History</a>
-                <a class="catoption" href="">Horror</a>
-                <a class="catoption" href="">Manga</a>
-                <a class="catoption" href="">Mystery & Thrillers</a>
-                <a class="catoption" href="">Romance</a>
-                <a class="catoption" href="">Sci-Fi & Fantasy</a>
-                <a class="catoption" href="">Self-Help & Relationships</a>
-            </nav>
-        </section>
-        <div class="herocat">
-            <div class="categorieTitle"><h5 id="categorieTitleName"></h5></div>
-            <div class="herocat2">
-                <nav class="sideNav">
-                    this is the side nav bar
-                   </nav>
-                   <section class="mainCatpanel">
-                    this is
-                   </section>
-            </div>
+      <section class="catsearchCont">
+        <div class="schbox">
+          <button class="allbtn">
+            All
+            <img
+              id="chevron"
+              src="images/chevron-right.svg"
+              alt="All options"
+            /><img
+              id="chevrondown"
+              src="images/chevron-down.svg"
+              alt="All options"
+            />
+          </button>
+          <input
+            id="searchrequest"
+            type="text"
+            placeholder="Search by Title, Author or keyword..."
+          />
+          <button id="entersearch" class="allbtn">
+            <img src="images/search-icon.svg" alt="Enter search" />
+          </button>
         </div>
+      </section>
+      <section class="categoriesBar">
+        <nav class="catsNavBar">
+          <a class="catoption" href="">BestSellers</a>
+          <a class="catoption" href="">Nonfiction</a>
+          <a
+            class="catoption"
+            onclick="loadCatpage('Fictions Books')"
+            href="Categorie.html"
+            >Fiction</a
+          >
+          <a class="catoption" href="">Biography</a>
+          <a class="catoption" href="">History</a>
+          <a class="catoption" href="">Horror</a>
+          <a class="catoption" href="">Manga</a>
+          <a class="catoption" href="">Mystery & Thrillers</a>
+          <a class="catoption" href="">Romance</a>
+          <a class="catoption" href="">Sci-Fi & Fantasy</a>
+          <a class="catoption" href="">Self-Help & Relationships</a>
+        </nav>
+      </section>
+      <div class="herocat">
+        <div class="categorieTitle"><h5 id="categorieTitleName"></h5></div>
+        <div class="herocat2">
+          <nav class="sideNav">this is the side nav bar</nav>
+          <section class="mainCatpanel">
+            <div class="categorieTitle">
+              <h2>Science Fiction</h2>
+            </div>
+
+            <div class="categorieBooks"></div>
+          </section>
+        </div>
+      </div>
     </main>
     <footer>
-        <div class="footeroptions">
-            <div id="footerInfo">
-                <a href="/">Home</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-                <a href="">Privacy</a>
-                <a href="">Help</a>
-                <div id="socialCont">
-                    <a href="" class="socialIcon"><img src="images/ico/instagram.svg" alt="Instagram"></a>
-                    <a href="" class="socialIcon"><img src="images/ico/facebook.svg" alt="Instagram"></a>
-                </div>
-                <div id="mapCont">
-                    <iframe title="map" id="mapId" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.2017338154093!2d4.054777583143902!3d36.69627584318798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc816c66438fb%3A0x390274960dacce78!2sD%C3%A9partement%20d&#39;Informatique%2C%20UMTO!5e1!3m2!1sen!2sdz!4v1743873514189!5m2!1sen!2sdz" frameborder="0">Location on Maps</iframe>
-                </div>
-            </div>        
-            <div id="logor">
-                <h1 id="ftrlogo">BOOKAURA ®  2025</h1>
-            </div>
+      <div class="footeroptions">
+        <div id="footerInfo">
+          <a href="/">Home</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Privacy</a>
+          <a href="">Help</a>
+          <div id="socialCont">
+            <a href="" class="socialIcon"
+              ><img src="images/ico/instagram.svg" alt="Instagram"
+            /></a>
+            <a href="" class="socialIcon"
+              ><img src="images/ico/facebook.svg" alt="Instagram"
+            /></a>
+          </div>
+          <div id="mapCont">
+            <iframe
+              title="map"
+              id="mapId"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.2017338154093!2d4.054777583143902!3d36.69627584318798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc816c66438fb%3A0x390274960dacce78!2sD%C3%A9partement%20d&#39;Informatique%2C%20UMTO!5e1!3m2!1sen!2sdz!4v1743873514189!5m2!1sen!2sdz"
+              frameborder="0"
+              >Location on Maps</iframe
+            >
+          </div>
         </div>
+        <div id="logor">
+          <h1 id="ftrlogo">BOOKAURA ® 2025</h1>
+        </div>
+      </div>
     </footer>
     <script src="Categories.js"></script>
     <script src="Categorie.js"></script>
     <script src="booksDb.js"></script>
+    <script src="authorsDb.js"></script>
     <script src="script.js"></script>
-</body>
+    <script>
+      window.openBookPage = function (selectedBookTitle) {
+        let selectedBook = allBooksObjects.find(
+          (book) => book.bookTitle === selectedBookTitle
+        );
+        let selectedBookAuthor = allAuthors.find(
+          (author) => author.name === selectedBook.bookAuthor
+        );
+
+        if (!selectedBook) {
+          console.log("Book not found");
+        }
+        localStorage.setItem("bookTitle", selectedBookTitle);
+        localStorage.setItem(
+          "bookAuthor",
+          selectedBook.bookAuthor || "unknown"
+        );
+        localStorage.setItem("bookPrice", selectedBook.bookPrice || "unknown");
+        localStorage.setItem("bookCover", selectedBook.bookCover || "unknown");
+        localStorage.setItem(
+          "bookRating",
+          selectedBook.bookRating || "unknown"
+        );
+        localStorage.setItem(
+          "bookOverview",
+          selectedBook.overview || "unknown"
+        );
+        localStorage.setItem("bookIsbn", selectedBook.ISBN || "unknown");
+        localStorage.setItem(
+          "bookPublisher",
+          selectedBook.publisher || "unknown"
+        );
+        localStorage.setItem(
+          "bookDate",
+          selectedBook.publicationDate || "unknown"
+        );
+        localStorage.setItem("bookPages", selectedBook.pages || "unknown");
+        localStorage.setItem(
+          "bookDims",
+          selectedBook.productDimensions || "unknown"
+        );
+        localStorage.setItem(
+          "bookAuthorDob",
+          selectedBookAuthor.dob || "unknown"
+        );
+        localStorage.setItem(
+          "bookAuthorShortBio",
+          selectedBookAuthor.shortBio || "unknown"
+        );
+        localStorage.setItem(
+          "bookAuthorPic",
+          selectedBookAuthor.pic || "unknown"
+        );
+        localStorage.setItem(
+          "bookTableArray",
+          JSON.stringify(selectedBook.tableOfContent) || "unknown"
+        );
+        window.location.href = "book.html";
+      };
+    </script>
+  </body>
 </html>
