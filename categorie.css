@@ -1,8 +1,8 @@
-.sideNav{
-    background-color: red;
+.sideNav{   
+    border-right: 2px solid black;
     height: 50vw;
     margin-left: 2vw;
-    width: 15vw;
+    width: 16vw;
 }
 .mainCatpanel{
     width: 80vw;
@@ -80,4 +80,21 @@ h5{
 }
 .catbookauthor{
     font-size: 0.8vw;
+}
+.sideNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    margin: 2vw;
+    font-family: serif;
+}
+.sideNav li{
+    margin: 2vw;
+}
+.sideNav a{
+    margin: 0.5vw;
+    color: rgb(51, 97, 34);
+    text-decoration: none;
 }

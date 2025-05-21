@@ -19,7 +19,6 @@
         <div class="navItems">
           <div class="navOpt"><a id="home" href="/">Home</a></div>
           <div class="navOpt"><a href="Categories.html">Categories</a></div>
-          <div class="navOpt"><a href="">Contact</a></div>
           <div class="navOpt"><a href="cart.html">Panier</a></div>
         </div>
         <button id="button" type="button" onclick="openLoginPage()">
@@ -39,29 +38,147 @@
           <h1>Your Shopping Cart</h1>
           <div class="bookBuy">
             <div class="buybookImg">
-              <img src="images/Abundance.jpg" alt="" />
+              <img src="images/Abundance.jpg" alt="Abundance Book Cover" />
             </div>
             <div id="buybookInformations">
               <div class="buybookInfo">
                 <h4 class="buybooktitle">Steve Jobs</h4>
-                <h5 class="buybookauteur">By Auteur</h5>
+                <h5 class="buybookauteur">By Walter Isaacson</h5>
               </div>
-              <div class="buybookprice">Prix</div>
+              <div class="buybookprice">€25.00</div>
               <div class="buybookquantCont">
                 <select aria-label="Quantité">
-                  <option value="0">1</option>
-                  <option value="1">2</option>
-                  <option value="2">3</option>
-                  <option value="3">4</option>
-                  <option value="4">5</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
+              <button class="removeBtn">Remove</button>
             </div>
           </div>
-          <div class="bookBuy">book buy</div>
-          <div class="bookBuy">book buy</div>
+          <div class="bookBuy">
+            <div class="buybookImg">
+              <img src="images/AnotherBook.jpg" alt="Another Book Cover" />
+            </div>
+            <div id="buybookInformations">
+              <div class="buybookInfo">
+                <h4 class="buybooktitle">Clean Code</h4>
+                <h5 class="buybookauteur">By Robert C. Martin</h5>
+              </div>
+              <div class="buybookprice">€30.00</div>
+              <div class="buybookquantCont">
+                <select aria-label="Quantité">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <button class="removeBtn">Remove</button>
+            </div>
+          </div>
+          <div id="cartSummary">
+            <h3>Order Summary</h3>
+            <div class="summaryRow">
+              <span>Subtotal</span>
+              <span id="subtotal">€55.00</span>
+            </div>
+            <div class="summaryRow">
+              <span>Shipping</span>
+              <span id="shipping">€5.00</span>
+            </div>
+            <div class="summaryRow totalRow">
+              <span>Total</span>
+              <span id="total">€60.00</span>
+            </div>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+          </div>
         </div>
-        <div id="paiement">paiement</div>
+        <div id="paiement">
+          <h2>Payment Options</h2>
+          <form id="paymentForm">
+            <label>
+              <input type="radio" name="payment" value="edahabia" checked />
+              Edahabia
+            </label>
+            <label>
+              <input type="radio" name="payment" value="cod" />
+              Cash on Delivery
+            </label>
+            <div id="edahabiaDetails">
+              <input type="text" placeholder="Edahabia Card Number" required pattern="[0-9]{16}" />
+            </div>
+            <div id="codDetails" style="display: none;">
+              <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}" />
+              <select id="wilaya" required>
+                <option value="">Select Wilaya</option>
+                <option value="adrar">Adrar</option>
+                <option value="chlef">Chlef</option>
+                <option value="laghouat">Laghouat</option>
+                <option value="oum_el_bouaghi">Oum El Bouaghi</option>
+                <option value="batna">Batna</option>
+                <option value="bejaia">Béjaïa</option>
+                <option value="biskra">Biskra</option>
+                <option value="bechar">Béchar</option>
+                <option value="blida">Blida</option>
+                <option value="bouira">Bouira</option>
+                <option value="tamanrasset">Tamanrasset</option>
+                <option value="tebessa">Tébessa</option>
+                <option value="tlemcen">Tlemcen</option>
+                <option value="tiaret">Tiaret</option>
+                <option value="tizi_ouzou">Tizi Ouzou</option>
+                <option value="alger">Alger</option>
+                <option value="djelfa">Djelfa</option>
+                <option value="jijel">Jijel</option>
+                <option value="setif">Sétif</option>
+                <option value="saida">Saïda</option>
+                <option value="skikda">Skikda</option>
+                <option value="sidi_bel_abbes">Sidi Bel Abbès</option>
+                <option value="annaba">Annaba</option>
+                <option value="guelma">Guelma</option>
+                <option value="constantine">Constantine</option>
+                <option value="medea">Médéa</option>
+                <option value="mostaganem">Mostaganem</option>
+                <option value="msila">M'Sila</option>
+                <option value="mascara">Mascara</option>
+                <option value="ouargla">Ouargla</option>
+                <option value="oran">Oran</option>
+                <option value="el_bayadh">El Bayadh</option>
+                <option value="illizi">Illizi</option>
+                <option value="bordj_bou_arreridj">Bordj Bou Arréridj</option>
+                <option value="boumerdes">Boumerdès</option>
+                <option value="el_tarf">El Tarf</option>
+                <option value="tindouf">Tindouf</option>
+                <option value="tissemsilt">Tissemsilt</option>
+                <option value="el_oued">El Oued</option>
+                <option value="khenchela">Khenchela</option>
+                <option value="souk_ahras">Souk Ahras</option>
+                <option value="tipaza">Tipaza</option>
+                <option value="mila">Mila</option>
+                <option value="ain_defla">Aïn Defla</option>
+                <option value="naama">Naâma</option>
+                <option value="ain_temouchent">Aïn Témouchent</option>
+                <option value="ghardaia">Ghardaïa</option>
+                <option value="relizane">Relizane</option>
+                <option value="timimoun">Timimoun</option>
+                <option value="bordj_badji_mokhtar">Bordj Badji Mokhtar</option>
+                <option value="ouled_djellal">Ouled Djellal</option>
+                <option value="beni_abbes">Béni Abbès</option>
+                <option value="in_salah">In Salah</option>
+                <option value="in_guezzam">In Guezzam</option>
+                <option value="touggourt">Touggourt</option>
+                <option value="djanet">Djanet</option>
+                <option value="el_m_ghair">El M'Ghair</option>
+                <option value="el_meniaa">El Meniaa</option>
+              </select>
+              <textarea placeholder="Detailed Address" required rows="3"></textarea>
+            </div>
+            <button type="submit">Pay Now</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
@@ -77,7 +194,7 @@
               ><img src="images/ico/instagram.svg" alt="Instagram"
             /></a>
             <a href="" class="socialIcon"
-              ><img src="images/ico/facebook.svg" alt="Instagram"
+              ><img src="images/ico/facebook.svg" alt="Facebook"
             /></a>
           </div>
           <div id="mapCont">
@@ -96,5 +213,15 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      document.querySelectorAll('input[name="payment"]').forEach(function(el) {
+        el.addEventListener('change', function() {
+          document.getElementById('cardDetails').style.display =
+            this.value === 'card' ? 'block' : 'none';
+        });
+      });
+      document.getElementById('cardDetails').style.display = 'block';
+    </script>
   </body>
 </html>

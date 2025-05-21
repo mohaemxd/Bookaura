@@ -7,12 +7,15 @@ function loadficCat(categorieName) {
     catMainTitle.innerText = categorieName;
 }
 
+
 var clickedOption = document.querySelectorAll('.catoption');
+var catTitle = document.querySelector('.catTitle');
 
 clickedOption.forEach(function(a) {
     a.onclick = function(event) {
         event.preventDefault(); // Prevent the link from navigating/reloading the page
         var selectedOptionTitle = a.innerText;
+        catTitle.innerText = selectedOptionTitle; // Update the category title
         loadCategoryBooks(selectedOptionTitle);
     }
 });
@@ -34,6 +37,27 @@ function loadCategoryBooks(selectedOptionTitle) {
             break;
         case "Horror":
             selectedCategorie = horrorBooks;
+            break;
+        case "Mystery & Thrillers":
+            selectedCategorie = mysteryThrillerBooks;
+            break;
+        case "History":
+            selectedCategorie = historyBooks;
+            break;
+        case "Manga":
+            selectedCategorie = mangaBooks;
+            break;
+        case "Romance":
+            selectedCategorie = romanceBooks;
+            break;
+        case "Self-Help & Relationships":
+            selectedCategorie = selfHelpBooks;
+            break; 
+        case "Romance":
+            selectedCategorie = romanceBooks;
+            break;
+        case "Sci-Fi & Fantasy":
+            selectedCategorie = scifiBooks;
             break;
         default:
             selectedCategorie = [];

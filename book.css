@@ -527,3 +527,45 @@ i{
     justify-content: center;
     display: flex;
 }
+.cart a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.cart a img {
+    width: 1.5vw;
+    height: 1.5vw;
+    transition: transform 0.3s ease;
+}
+
+.cart a:hover img {
+    transform: scale(1.1);
+}
+
+.cart a:first-child {
+    font-size: 0;
+}
+
+.cart a:last-child img {
+    width: 1.5vw;
+    height: 1.5vw;
+    transition: transform 0.3s ease;
+}
+
+.cart a:last-child:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+    .cart a img {
+        width: 4vw;
+        height: 4vw;
+    }
+    
+    .cart a:last-child img {
+        width: 4vw;
+        height: 4vw;
+    }
+}

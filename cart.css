@@ -1,56 +1,486 @@
-main{
+/* Continue styling the cart page */
+
+/* Main cart section styling */
+#secHero {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    gap: 2vw;
+    min-height: 80vh;
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+}
+
+#produitAchetes {
+    flex: 2;
+    padding: 2vw;
+    background: #fff;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.5vw 2vw rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+#produitAchetes:hover {
+    transform: translateY(-0.2vw);
+}
+
+#produitAchetes h1 {
+    font-size: 2.5vw;
+    color: #2c3e50;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1vw;
+}
+
+#produitAchetes h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10vw;
+    height: 0.3vw;
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    border-radius: 0.2vw;
+}
+
+/* Empty cart styling */
+.empty-cart-message {
+    text-align: center;
+    padding: 4vw 2vw;
+    background: #fff;
+    border-radius: 1vw;
+    margin: 2vw 0;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.05);
+}
+
+.empty-cart-message p {
+    font-size: 1.8vw;
+    color: #6c757d;
+    margin-bottom: 2vw;
+    font-weight: 500;
+}
+
+.continue-shopping {
+    display: inline-block;
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    color: white;
+    padding: 1.2vw 2.5vw;
+    border-radius: 0.8vw;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.3vw 1vw rgba(94, 79, 75, 0.2);
+}
+
+.continue-shopping:hover {
+    transform: translateY(-0.2vw);
+    box-shadow: 0 0.5vw 1.5vw rgba(94, 79, 75, 0.3);
+}
+
+/* Book item styling */
+.bookBuy {
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    margin-bottom: 2vw;
+    background: #fff;
+    border-radius: 1vw;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.bookBuy:hover {
+    transform: translateY(-0.3vw);
+    box-shadow: 0 0.5vw 1.5vw rgba(0,0,0,0.1);
+}
+
+.buybookImg {
+    width: 8vw;
+    height: 12vw;
+    margin-right: 2vw;
+    border-radius: 0.8vw;
+    overflow: hidden;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.1);
+}
+
+.buybookImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.bookBuy:hover .buybookImg img {
+    transform: scale(1.05);
+}
+
+#buybookInformations {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.buybookInfo {
     flex: 1;
 }
-#secHero{
-    background-color: red;
-    height: 50vw;
-    margin: 10vw;
-    display: flex;
-}
-#produitAchetes{
-    background-color: #80726e;
-    width: 50vw;
-    overflow-y: scroll;
-}
-#produitAchetes h1{
-    font-size: 2.5vw;
-    margin: 2vw;
-}
-.bookBuy{
-    background-color: brown;
-    margin: 2vw;
-    height: 20vw;
-    display: flex;
-}
-#paiement{
-    background-color: #aec5c2;
-    width: 30vw;
-}
-.buybookImg{
-    background-color: black;
-    height: 15vw;
-    margin: 2vw;
-}
-.buybookImg img{
-    height: 15vw;
+
+.buybooktitle {
+    font-size: 1.5vw;
+    color: #2c3e50;
+    margin-bottom: 0.5vw;
+    font-weight: 600;
 }
 
+.buybookauteur {
+    font-size: 1.2vw;
+    color: #6c757d;
+    font-weight: 500;
+}
 
-#buybookInformations{
+.buybookprice {
+    font-size: 1.5vw;
+    color: #80726e;
+    font-weight: 600;
+    margin: 0 2vw;
+}
+
+.itemTotal {
+    font-size: 1.5vw;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0 2vw;
+    min-width: 8vw;
+    text-align: right;
+}
+
+.buybookquantCont select {
+    padding: 0.8vw 1.5vw;
+    border: 1px solid #dee2e6;
+    border-radius: 0.8vw;
+    font-size: 1.2vw;
+    margin: 0 2vw;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2380726e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1vw center;
+    background-size: 1.2vw;
+    padding-right: 3vw;
+}
+
+.buybookquantCont select:hover {
+    border-color: #80726e;
+}
+
+.removeBtn {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 0.8vw 1.5vw;
+    border-radius: 0.8vw;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.3vw 1vw rgba(231, 76, 60, 0.2);
+}
+
+.removeBtn:hover {
+    transform: translateY(-0.2vw);
+    box-shadow: 0 0.5vw 1.5vw rgba(231, 76, 60, 0.3);
+}
+
+/* Cart summary styling */
+#cartSummary {
+    margin-top: 3vw;
+    padding: 2vw;
+    background: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+#cartSummary h3 {
+    font-size: 1.8vw;
+    color: #2c3e50;
+    margin-bottom: 1.5vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+.summaryRow {
     display: flex;
-    align-items: flex-start;
-    position: relative;
-    margin-top: 2vw;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    font-size: 1.2vw;
+    color: #6c757d;
+    padding: 0.5vw 0;
 }
-.buybookInfo{
-    background-color: blue;
-    height: 10vw;
-    width: 15vw;
+
+.totalRow {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #2c3e50;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1vw;
+    margin-top: 1vw;
 }
-.buybooktitle, .buybookauteur{
+
+#checkoutBtn {
+    width: 100%;
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    color: white;
+    border: none;
+    padding: 1.2vw;
+    border-radius: 0.8vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1.5vw;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.3vw 1vw rgba(94, 79, 75, 0.2);
+}
+
+#checkoutBtn:hover {
+    transform: translateY(-0.2vw);
+    box-shadow: 0 0.5vw 1.5vw rgba(94, 79, 75, 0.3);
+}
+
+/* Payment section styling */
+#paiement {
+    flex: 1;
+    background: #fff;
+    padding: 2vw;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.5vw 2vw rgba(0,0,0,0.08);
+    height: fit-content;
+    transition: transform 0.3s ease;
+}
+
+#paiement:hover {
+    transform: translateY(-0.2vw);
+}
+
+#paiement h2 {
     font-size: 2vw;
-    margin: 1vw;
+    color: #2c3e50;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1vw;
 }
-.buybookauteur{
-    font-size: 1.5vw
+
+#paiement h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8vw;
+    height: 0.3vw;
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    border-radius: 0.2vw;
+}
+
+#paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+#paymentForm label {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.2vw;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 1.2vw;
+    border-radius: 0.8vw;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+#paymentForm label:hover {
+    background-color: #f8f9fa;
+    border-color: #80726e;
+}
+
+#paymentForm input[type="radio"] {
+    width: 1.2vw;
+    height: 1.2vw;
+    accent-color: #80726e;
+}
+
+#edahabiaDetails, #codDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 1vw;
+    padding: 1.5vw;
+    background: #f8f9fa;
+    border-radius: 0.8vw;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+#edahabiaDetails input, #codDetails input, #codDetails select, #codDetails textarea {
+    padding: 1.2vw;
+    border: 1px solid #dee2e6;
+    border-radius: 0.8vw;
+    font-size: 1.2vw;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+#edahabiaDetails input:focus, #codDetails input:focus, #codDetails select:focus, #codDetails textarea:focus {
+    border-color: #80726e;
+    outline: none;
+    box-shadow: 0 0 0 0.2vw rgba(128, 114, 110, 0.1);
+}
+
+#codDetails select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2380726e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1vw center;
+    background-size: 1.2vw;
+    padding-right: 3vw;
+}
+
+#codDetails textarea {
+    resize: vertical;
+    min-height: 8vw;
+}
+
+#paymentForm button[type="submit"] {
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    color: white;
+    border: none;
+    padding: 1.2vw;
+    border-radius: 0.8vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1vw;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.3vw 1vw rgba(94, 79, 75, 0.2);
+}
+
+#paymentForm button[type="submit"]:hover {
+    transform: translateY(-0.2vw);
+    box-shadow: 0 0.5vw 1.5vw rgba(94, 79, 75, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    #secHero {
+        flex-direction: column;
+        padding: 4vw;
+    }
+
+    #produitAchetes, #paiement {
+        width: 100%;
+    }
+
+    .bookBuy {
+        flex-direction: column;
+        text-align: center;
+        padding: 4vw;
+    }
+
+    .buybookImg {
+        width: 50vw;
+        height: 75vw;
+        margin: 0 auto 4vw;
+    }
+
+    #buybookInformations {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .buybooktitle {
+        font-size: 4vw;
+    }
+
+    .buybookauteur {
+        font-size: 3vw;
+    }
+
+    .buybookprice, .itemTotal {
+        font-size: 4vw;
+        margin: 2vw 0;
+    }
+
+    .buybookquantCont select {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+        margin: 2vw 0;
+    }
+
+    .removeBtn {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+
+    .empty-cart-message p {
+        font-size: 4vw;
+    }
+
+    .continue-shopping {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+
+    #cartSummary h3 {
+        font-size: 4vw;
+    }
+
+    .summaryRow {
+        font-size: 3vw;
+    }
+
+    .totalRow {
+        font-size: 4vw;
+    }
+
+    #checkoutBtn {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+
+    #paiement h2 {
+        font-size: 4vw;
+    }
+
+    #paymentForm label {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+
+    #edahabiaDetails input, #codDetails input, #codDetails select, #codDetails textarea {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+
+    #codDetails select {
+        background-size: 3vw;
+        padding-right: 6vw;
+    }
+
+    #paymentForm button[type="submit"] {
+        font-size: 3vw;
+        padding: 2vw;
+    }
 }

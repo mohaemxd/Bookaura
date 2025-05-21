@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="stylecat.css" />
     <link rel="stylesheet" href="categorie.css" />
+    <link rel="shortcut icon" href="images/ico/logo ico.png" type="image/x-icon">
     <title>Categories</title>
   </head>
   <body>
@@ -13,12 +14,9 @@
       <div class="header-elements">
         <h1 id="name"><img src="" alt="" />BOOKAURA</h1>
         <div class="navItems">
-          <div class="navOpt"><a href="/">Home</a></div>
-          <div class="navOpt">
-            <a id="cata" href="Categories.html">Categories</a>
-          </div>
-          <div class="navOpt"><a href="">Contact</a></div>
-          <div class="navOpt"><a href="">Panier</a></div>
+          <div class="navOpt"><a id="home" href="/">Home</a></div>
+          <div class="navOpt"><a href="Categories.html">Categories</a></div>
+          <div class="navOpt"><a href="cart.html">Panier</a></div>
         </div>
         <button id="button" type="button" onclick="openLoginPage() ">
           Login
@@ -55,10 +53,8 @@
       </section>
       <section class="categoriesBar">
         <nav class="catsNavBar">
-          <a class="catoption" href="">BestSellers</a>
-          <a class="catoption" href="">Nonfiction</a>
           <a
-            class="catoption"
+            class="catoption" 
             onclick="loadCatpage('Fictions Books')"
             href="Categorie.html"
             >Fiction</a
@@ -76,10 +72,23 @@
       <div class="herocat">
         <div class="categorieTitle"><h5 id="categorieTitleName"></h5></div>
         <div class="herocat2">
-          <nav class="sideNav">this is the side nav bar</nav>
+          <nav class="sideNav">
+            <ul class="sideCatList">
+              <li><a href="">BestSellers</a></li>
+              <li><a href="" onclick="loadCatpage('Fictions Books')">Fiction</a></li>
+              <li><a href="">Biography</a></li>
+              <li><a href="">History</a></li>
+              <li><a href="">Horror</a></li>
+              <li><a href="">Manga</a></li>
+              <li><a href="">Mystery & Thrillers</a></li>
+              <li><a href="">Romance</a></li>
+              <li><a href="">Sci-Fi & Fantasy</a></li>
+              <li><a href="">Self-Help & Relationships</a></li>
+            </ul>
+          </nav></nav>
           <section class="mainCatpanel">
             <div class="categorieTitle">
-              <h2>Science Fiction</h2>
+              <h2 class="catTitle"></h2>
             </div>
 
             <div class="categorieBooks"></div>

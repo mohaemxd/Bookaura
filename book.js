@@ -1,4 +1,3 @@
-
 window.onload = function(){
     var title = localStorage.getItem("bookTitle");
     var author = localStorage.getItem("bookAuthor");
@@ -63,9 +62,83 @@ window.onload = function(){
         }
     }
     displayReviews(title);
+
+    // Add to cart button functionality
+    document.getElementById('addBookToCart').addEventListener('click', function() {
+        const bookData = {
+            id: bookIsbn, // Using ISBN as unique identifier
+            title: title,
+            author: author,
+            price: parseFloat(price),
+            image: imageSrc,
+            quantity: 1
+        };
+        
+        // Call the addToCart function from cart.js
+        if (typeof addToCart === 'function') {
+            addToCart(bookData);
+            // Show success message
+            showAddToCartMessage();
+        } else {
+            console.error('addToCart function not found');
+        }
+    });
 };
 
+// Function to show add to cart success message
+function showAddToCartMessage() {
+    const message = document.createElement('div');
+    message.className = 'add-to-cart-message';
+    message.textContent = 'Book added to cart!';
+    message.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 5px;
+        z-index: 1000;
+        animation: slideIn 0.5s ease-out;
+    `;
 
+    document.body.appendChild(message);
+
+    // Remove message after 3 seconds
+    setTimeout(() => {
+        message.style.animation = 'slideOut 0.5s ease-out';
+        setTimeout(() => {
+            document.body.removeChild(message);
+        }, 500);
+    }, 3000);
+}
+
+// Add CSS animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
 
 function submitReview(bookName){
     var userName = document.getElementById("reviewerName").value;
