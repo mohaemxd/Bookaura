@@ -1,0 +1,280 @@
+#aboutHero {
+    background-color: #faffe9;
+    min-height: 100vh;
+    padding: 4vw;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    background: white;
+    border-radius: 1.5vw;
+    padding: 3vw;
+    margin-bottom: 3vw;
+    box-shadow: 0 0.5vw 2vw rgba(0,0,0,0.08);
+}
+
+.about-section h1 {
+    font-size: 2.5vw;
+    color: #2c3e50;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1vw;
+}
+
+.about-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10vw;
+    height: 0.3vw;
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    border-radius: 0.2vw;
+}
+
+.about-content {
+    display: flex;
+    gap: 4vw;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 1.8vw;
+    color: #2c3e50;
+    margin: 1.5vw 0 1vw;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 1.5vw;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding-left: 1vw;
+}
+
+.about-text ul li {
+    font-size: 1.2vw;
+    color: #4a4a4a;
+    margin-bottom: 0.8vw;
+    position: relative;
+    padding-left: 1.5vw;
+}
+
+.about-text ul li::before {
+    content: '•';
+    color: #80726e;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 0;
+    top: -0.2vw;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-image img {
+    width: 20vw;
+    height: auto;
+    border-radius: 1vw;
+    box-shadow: 0 0.5vw 2vw rgba(0,0,0,0.1);
+}
+
+.project-section {
+    background: white;
+    border-radius: 1.5vw;
+    padding: 3vw;
+    box-shadow: 0 0.5vw 2vw rgba(0,0,0,0.08);
+}
+
+.project-section h2 {
+    font-size: 2vw;
+    color: #2c3e50;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1vw;
+}
+
+.project-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8vw;
+    height: 0.3vw;
+    background: linear-gradient(to right, #80726e, #5e4f4b);
+    border-radius: 0.2vw;
+}
+
+.project-content {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.project-content p {
+    margin-bottom: 2vw;
+}
+
+.developers {
+    margin: 3vw 0;
+}
+
+.developers h3 {
+    font-size: 1.6vw;
+    color: #2c3e50;
+    margin-bottom: 1.5vw;
+    text-align: center;
+}
+
+.developer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+}
+
+.developer-card {
+    background: #f8f9fa;
+    padding: 2vw;
+    border-radius: 1vw;
+    text-align: center;
+    flex: 1;
+    min-width: 20vw;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-0.5vw);
+}
+
+.developer-card h4 {
+    font-size: 1.4vw;
+    color: #2c3e50;
+    margin-bottom: 0.5vw;
+}
+
+.developer-card p {
+    font-size: 1.1vw;
+    color: #6c757d;
+    margin: 0.3vw 0;
+}
+
+.technologies {
+    margin-top: 3vw;
+}
+
+.technologies h3 {
+    font-size: 1.6vw;
+    color: #2c3e50;
+    margin-bottom: 1.5vw;
+    text-align: center;
+}
+
+.technologies ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.technologies li {
+    background: #f8f9fa;
+    padding: 1vw 2vw;
+    border-radius: 0.8vw;
+    font-size: 1.1vw;
+    color: #4a4a4a;
+    box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.05);
+}
+
+@media (max-width: 900px) {
+    #aboutHero {
+        padding: 6vw;
+    }
+
+    .about-section {
+        padding: 4vw;
+    }
+
+    .about-section h1 {
+        font-size: 6vw;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .about-text h2 {
+        font-size: 4vw;
+    }
+
+    .about-text p,
+    .about-text ul li {
+        font-size: 3vw;
+    }
+
+    .about-image img {
+        width: 40vw;
+    }
+
+    .project-section {
+        padding: 4vw;
+    }
+
+    .project-section h2 {
+        font-size: 5vw;
+    }
+
+    .project-content {
+        font-size: 3vw;
+    }
+
+    .developers h3,
+    .technologies h3 {
+        font-size: 4vw;
+    }
+
+    .developer-card {
+        min-width: 80vw;
+        padding: 4vw;
+    }
+
+    .developer-card h4 {
+        font-size: 3.5vw;
+    }
+
+    .developer-card p {
+        font-size: 3vw;
+    }
+
+    .technologies li {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+}

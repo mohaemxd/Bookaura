@@ -1,6 +1,6 @@
-/* Continue styling the cart page */
-
-/* Main cart section styling */
+body{
+    background-color: #faffe9;
+}
 #secHero {
     display: flex;
     justify-content: space-between;
@@ -311,7 +311,7 @@
 }
 
 #paymentForm label:hover {
-    background-color: #f8f9fa;
+    background-color: #857558;
     border-color: #80726e;
 }
 
@@ -382,7 +382,6 @@
     box-shadow: 0 0.5vw 1.5vw rgba(94, 79, 75, 0.3);
 }
 
-/* Responsive design */
 @media (max-width: 900px) {
     #secHero {
         flex-direction: column;
