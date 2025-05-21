@@ -1278,7 +1278,6 @@ var allBooksObjects = [
     ...scifiBooks.flatMap(book => book),
 ]
 
-console.log(allBooksObjects);
 
 var allBooksTitles = [
     ...ficBooks.map(book => book.bookTitle),
@@ -1292,7 +1291,6 @@ var allBooksTitles = [
     ...mangaBooks.map(book => book.bookTitle)
 ]
 
-console.log(allBooksTitles);
 
 
 

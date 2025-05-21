@@ -1,3 +1,4 @@
+
 console.log("openBookPage is loaded");
 var clickedBooks1 = document.querySelectorAll('.trdimg');
 var clickedBooks2 = document.querySelectorAll('.bstimg');
@@ -46,72 +47,35 @@ function openBookPage(selectedBookTitle){
     window.location.href = "book.html"; 
 }
 
-// Global variables
-let resultsBox = null;
-let searchInput = null;
 
-// Initialize search functionality
-function initSearch() {
-    searchInput = document.getElementById('searchInput');
-    resultsBox = document.getElementById('resultsBox');
-    
-    if (searchInput && resultsBox) {
-        searchInput.addEventListener('input', handleSearch);
-        document.addEventListener('click', (e) => {
-            if (!searchInput.contains(e.target) && !resultsBox.contains(e.target)) {
-                resultsBox.style.display = 'none';
-            }
-        });
-    }
+
+function openLoginPage(){
+    window.location.href = "login.html";
 }
 
-// Handle search functionality
-function handleSearch() {
-    if (!searchInput || !resultsBox) return;
-    
-    const searchTerm = searchInput.value.toLowerCase();
-    if (searchTerm.length < 2) {
-        resultsBox.style.display = 'none';
-        return;
+const resultsBox = document.querySelector(".search-recs");
+const inputBox = document.getElementById("searchbox");
+inputBox.onkeyup = function(){
+    let result = [];
+    let input = inputBox.value;
+    if(input.length){
+        result = allBooksTitles.filter((keyword)=>{
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        }).slice(0,4);
+        console.log(result)
     }
-
-    // Get books from localStorage or use empty array
-    const books = JSON.parse(localStorage.getItem('books')) || [];
-    
-    const filteredBooks = books.filter(book => 
-        book.title.toLowerCase().includes(searchTerm) || 
-        book.author.toLowerCase().includes(searchTerm)
-    );
-
+    displaySearchResult(result);
+}
+function displaySearchResult(result){
+    const content = result.map((list)=>{
+        return "<li onclick=selectInput(this)>" + list +"</li>";
+    });
+    resultsBox.innerHTML = "<ul>" + content.join("") + "</ul>";
+}
+function selectInput(list){
+    inputBox.value = list.innerHTML;
     resultsBox.innerHTML = '';
-    if (filteredBooks.length > 0) {
-        filteredBooks.forEach(book => {
-            const resultItem = document.createElement('div');
-            resultItem.className = 'searchResult';
-            resultItem.innerHTML = `
-                <img src="${book.image}" alt="${book.title}">
-                <div>
-                    <h4>${book.title}</h4>
-                    <p>By ${book.author}</p>
-                </div>
-            `;
-            resultItem.onclick = () => {
-                window.location.href = `book.html?title=${encodeURIComponent(book.title)}`;
-            };
-            resultsBox.appendChild(resultItem);
-        });
-        resultsBox.style.display = 'block';
-    } else {
-        resultsBox.style.display = 'none';
-    }
 }
-
-// Login functionality
-function openLoginPage() {
-    window.location.href = 'login.html';
+function submitSearch(){
+    openBookPage(inputBox.value);
 }
-
-// Initialize page
-document.addEventListener('DOMContentLoaded', function() {
-    initSearch();
-});
