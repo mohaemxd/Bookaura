@@ -13,16 +13,16 @@ var catTitle = document.querySelector('.catTitle');
 
 clickedOption.forEach(function(a) {
     a.onclick = function(event) {
-        event.preventDefault(); // Prevent the link from navigating/reloading the page
+        event.preventDefault(); 
         var selectedOptionTitle = a.innerText;
-        catTitle.innerText = selectedOptionTitle; // Update the category title
+        catTitle.innerText = selectedOptionTitle; 
         loadCategoryBooks(selectedOptionTitle);
     }
 });
 
 var CategorieSelectedSection = document.querySelector(".categorieBooks"); 
 function loadCategoryBooks(selectedOptionTitle) {
-    CategorieSelectedSection.innerHTML = ""; // clear previous books
+    CategorieSelectedSection.innerHTML = "";
 
     var selectedCategorie = [];
     switch (selectedOptionTitle) {
