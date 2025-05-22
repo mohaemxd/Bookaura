@@ -45,7 +45,6 @@ body{
     border-radius: 0.2vw;
 }
 
-/* Empty cart styling */
 .empty-cart-message {
     text-align: center;
     padding: 4vw 2vw;
@@ -80,7 +79,6 @@ body{
     box-shadow: 0 0.5vw 1.5vw rgba(94, 79, 75, 0.3);
 }
 
-/* Book item styling */
 .bookBuy {
     display: flex;
     align-items: center;
@@ -198,7 +196,6 @@ body{
     box-shadow: 0 0.5vw 1.5vw rgba(231, 76, 60, 0.3);
 }
 
-/* Cart summary styling */
 #cartSummary {
     margin-top: 3vw;
     padding: 2vw;
@@ -254,7 +251,6 @@ body{
     box-shadow: 0 0.5vw 1.5vw rgba(94, 79, 75, 0.3);
 }
 
-/* Payment section styling */
 #paiement {
     flex: 1;
     background: #fff;
