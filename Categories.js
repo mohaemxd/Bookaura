@@ -62,8 +62,8 @@ function fillNonFicSection(){
         var bookTitleA = document.createElement("a");
         bookTitleA.href = "book.html";
         bookTitleA.onclick = function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            openBookPage(nonficBooks[i].bookTitle); // Call the function with the book title
+            event.preventDefault(); 
+            openBookPage(nonficBooks[i].bookTitle); 
         };
         var bookTitleH6 = document.createElement("h6");
         bookTitleH6.innerText = nonficBooks[i].bookTitle;
@@ -102,14 +102,14 @@ function fillBioSection(){
         bookimg.style.cursor = "pointer";
         
         bookimg.onclick = function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            openBookPage(bioBooks[i].bookTitle); // Call the function with the book title
+            event.preventDefault(); 
+            openBookPage(bioBooks[i].bookTitle); 
         };
         var bookTitleA = document.createElement("a");
         bookTitleA.href = "book.html";
         bookTitleA.onclick = function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            openBookPage(bioBooks[i].bookTitle); // Call the function with the book title
+            event.preventDefault(); 
+            openBookPage(bioBooks[i].bookTitle); 
         };
         bookimg.classList.add("bookimgc");
         var bookTitleH6 = document.createElement("h6");
@@ -150,14 +150,14 @@ function fillHorrorSection(){
         bookimg.style.cursor = "pointer";
         
         bookimg.onclick = function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            openBookPage(horrorBooks[i].bookTitle); // Call the function with the book title
+            event.preventDefault(); 
+            openBookPage(horrorBooks[i].bookTitle);
         };
         var bookTitleA = document.createElement("a");
         bookTitleA.href = "book.html";
         bookTitleA.onclick = function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            openBookPage(horrorBooks[i].bookTitle); // Call the function with the book title
+            event.preventDefault();
+            openBookPage(horrorBooks[i].bookTitle); 
         };
         bookimg.classList.add("bookimgc");
         var bookTitleH6 = document.createElement("h6");
