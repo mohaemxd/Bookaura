@@ -118,7 +118,7 @@
     <script src="booksDb.js"></script>
     <script src="authorsDb.js"></script>
     <script src="Categories.js"></script>
-    <script src="script.js"></script> <!-- Load this last -->
+    <script src="script.js"></script> 
     <script>
         function fillFicSection() {
             var ficSection = document.getElementById('ficcatclass');
@@ -131,14 +131,14 @@
                 bookimg.classList.add("bookimgc");
                 bookimg.alt = ficBooks[i].bookTitle;
                 bookimg.onclick = function (event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    openBookPage(ficBooks[i].bookTitle); // Call the function with the book title
+                    event.preventDefault(); 
+                    openBookPage(ficBooks[i].bookTitle); 
                 };
                 var bookTitleA = document.createElement("a");
-                bookTitleA.href = "#"; // Prevent default navigation
+                bookTitleA.href = "#"; 
                 bookTitleA.onclick = function (event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    openBookPage(ficBooks[i].bookTitle); // Call the function with the book title
+                    event.preventDefault(); 
+                    openBookPage(ficBooks[i].bookTitle); 
                 };
                 var bookTitleH6 = document.createElement("h6");
                 bookTitleH6.innerText = ficBooks[i].bookTitle;
