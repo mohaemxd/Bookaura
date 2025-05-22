@@ -1,7 +1,5 @@
-// Cart data structure
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// DOM Elements
 const cartContainer = document.getElementById('produitAchetes');
 const cartSummary = document.getElementById('cartSummary');
 const subtotalElement = document.getElementById('subtotal');
@@ -9,10 +7,8 @@ const shippingElement = document.getElementById('shipping');
 const totalElement = document.getElementById('total');
 const paymentForm = document.getElementById('paymentForm');
 
-// Constants
 const SHIPPING_COST = 5.00;
 
-// Initialize cart
 function initializeCart() {
     if (cart.length === 0) {
         showEmptyCart();
@@ -24,7 +20,6 @@ function initializeCart() {
     setupPaymentListeners();
 }
 
-// Setup event listeners
 function setupEventListeners() {
     cartContainer.addEventListener('click', function(e) {
         if (e.target.classList.contains('removeBtn')) {
@@ -47,7 +42,6 @@ function setupEventListeners() {
     });
 }
 
-// Setup payment method listeners
 function setupPaymentListeners() {
     document.querySelectorAll('input[name="payment"]').forEach(function(el) {
         el.addEventListener('change', function() {
@@ -57,7 +51,6 @@ function setupPaymentListeners() {
             edahabiaDetails.style.display = this.value === 'edahabia' ? 'block' : 'none';
             codDetails.style.display = this.value === 'cod' ? 'block' : 'none';
             
-            // Update form validation
             const edahabiaInputs = edahabiaDetails.querySelectorAll('input');
             const codInputs = codDetails.querySelectorAll('input, select, textarea');
             
@@ -67,7 +60,6 @@ function setupPaymentListeners() {
     });
 }
 
-// Show empty cart message
 function showEmptyCart() {
     cartContainer.innerHTML = `
         <h1>Your Shopping Cart</h1>
@@ -79,7 +71,6 @@ function showEmptyCart() {
     cartSummary.style.display = 'none';
 }
 
-// Render cart items
 function renderCart() {
     const cartItemsHTML = cart.map((item, index) => `
         <div class="bookBuy" data-id="${item.id}">
@@ -111,7 +102,6 @@ function renderCart() {
     `;
 }
 
-// Update item quantity
 function updateQuantity(index, newQuantity) {
     cart[index].quantity = parseInt(newQuantity);
     saveCart();
@@ -119,7 +109,6 @@ function updateQuantity(index, newQuantity) {
     updateSummary();
 }
 
-// Remove item from cart
 function removeItem(index) {
     cart.splice(index, 1);
     saveCart();
@@ -131,7 +120,6 @@ function removeItem(index) {
     }
 }
 
-// Update cart summary
 function updateSummary() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const total = subtotal + SHIPPING_COST;
@@ -141,12 +129,10 @@ function updateSummary() {
     totalElement.textContent = `€${total.toFixed(2)}`;
 }
 
-// Save cart to localStorage
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Form validation and submission
 paymentForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -175,13 +161,11 @@ paymentForm.addEventListener('submit', function(e) {
     }
 });
 
-// Validate Edahabia card
 function validateEdahabiaCard(cardNumber) {
     const cardNumberRegex = /^\d{16}$/;
     return cardNumberRegex.test(cardNumber);
 }
 
-// Validate COD details
 function validateCODDetails(phone, wilaya, address) {
     const phoneRegex = /^[0-9]{10}$/;
     return phoneRegex.test(phone) && 
@@ -189,9 +173,7 @@ function validateCODDetails(phone, wilaya, address) {
            address.trim().length > 0;
 }
 
-// Process payment
 function processPayment(paymentMethod) {
-    // Simulate payment processing
     let message = `Processing ${paymentMethod} payment...`;
     if (paymentMethod === 'cod') {
         const phone = document.querySelector('#codDetails input[type="tel"]').value;
@@ -204,21 +186,17 @@ function processPayment(paymentMethod) {
     }
     alert(message);
     
-    // Clear cart after successful payment
     cart = [];
     saveCart();
     showEmptyCart();
     
-    // Redirect to confirmation page
     setTimeout(() => {
         window.location.href = '/confirmation.html';
     }, 2000);
 }
 
-// Initialize cart when page loads
 document.addEventListener('DOMContentLoaded', initializeCart);
 
-// Example function to add item to cart (can be called from other pages)
 function addToCart(item) {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     
