@@ -1,11 +1,4 @@
 var reviews = [
-    {
-        username: "MohaemxdReads",
-        bookRated: "Dune",
-        stars: 4,
-        reviewTitle:"A good Read!",
-        review: "I like this books yay",
-    },
 ];
 
 function displayReviews(ratedBookName) {
